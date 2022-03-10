@@ -16,6 +16,9 @@
 body{
     font-family: 'Red Hat Display', sans-serif;
     font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 main{
     background-color: var(--pale-blue);
@@ -35,6 +38,7 @@ main{
     justify-content: center;
     align-items: center;
     box-shadow: 0 40px 25px rgba(77, 78, 78, 0.2);
+    z-index: 10;
 }
 .suscripcion__img{
     width: 100%;
@@ -133,6 +137,30 @@ main{
     font-size: 16px;
 }
 footer{
+    width: 100%;
     background-color: var(--pale-blue);
     padding: 1rem 0;
+}
+.bg-mobile{
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.bg-mobile svg,
+.bg-desktop svg{
+    width: 100%;
+}
+.bg-desktop{
+    display: none;
+    position: absolute;
+    top: 0;
+}
+@media screen and (min-width: 520px) {
+    .bg-mobile{
+        display: none;
+    }
+    .bg-desktop{
+        display: block;
+    }
 }
